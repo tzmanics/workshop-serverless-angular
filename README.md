@@ -18,7 +18,7 @@ With our sites requiring more data and our users requiring faster speeds, we nee
 
 This repo doesn't need to be cloned, it's purpose is to guide you through each section of the workshop. My hope is that you'll be able to use this repo as a resource even when you're not in the workshop with me. In the workshop we'll be going in this order:
 
-0. [Introduction](/introduction/README.md) (EDT 12:00 - 12:30)
+0. Introduction (EDT 12:00 - 12:30)
 1. [Project Setup & Deployment](/setup-and-deployment/README.md) (EDT 12:30 - 13:00)
 2. [User Login using Netlify Identity](/user-login/README.md) (EDT 13:00 - 13:30)
 3. [Building a Products List with Sanity.io Headless CMS](product-list/README.md) (EDT 13:30 - 15:00)
