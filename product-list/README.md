@@ -11,7 +11,7 @@ This is what the page will look like:
 
 \<coding-time>
 
-## Setting Up Sanity
+# Setting Up Sanity
 
 It's time to set up the Sanity.io instance locally. We can do this with the Sanity.io CLI first by installing the CLI tool then initializing a Sanity.io project:
 
@@ -24,7 +24,7 @@ When we run `sanity init` it will make sure we're logged in (and have an account
 
 ![sanity init output](https://cdn.netlify.com/ba702acad9a0a7363e5ce2948297489f237a5fa3/6ef9d/img/blog/sanity-init.jpg '`sanity init` ouput')
 
-We'll create a new project and name it `backend`, say yes to the defaults, but use the `Clean project with no redefined schemas`. Using the clean product will allow us to write custom schemas without too much overhead that may be confusing.
+We'll create a new project and name it `backend`, say 'yes' to the defaults, but use the `Clean project with no redefined schemas`. Using the clean product will allow us to write custom schemas without too much overhead that may be confusing.
 
 Change into the Sanity.io instance `backend` folder and run `sanity start` to start the UI up locally.
 
@@ -447,11 +447,11 @@ To deploy the updated function we can git add, commit, and push the changes. The
 
 We have a template site set up, a customized instance of Sanity.io, and a function that's grabbing our CMS data! We are so skilled! In part two of this tutorial, we'll use add an Angular service and component to integrate this data into the site. Then we'll set up a Build Hook so that we re-deploy the site with the newest data as soon as it's entered. I hope to see you there and until then, happy coding 👩🏻‍💻
 
-## Making the Angular Service
+# Making the Angular Service
 
-In the first part of the series we [added a Netlify Function to grab the data we needed from Sanity.io](https://github.com/tzmanics/angular-sanity/blob/main/functions/getProducts.js). Now, we will use an [Angular service](https://angular.io/guide/architecture-services) to access that data.
+In the first part we [added a Netlify Function to grab the data we needed from Sanity.io](https://github.com/tzmanics/angular-sanity/blob/main/functions/getProducts.js). Now, we will use an [Angular service](https://angular.io/guide/architecture-services) to access that data.
 
-### Adding the Product Model
+## Adding the Product Model
 
 One thing that we'll need before anything else is an interface of the product data we're receiving from Sanity.io. An [interface](https://www.typescriptlang.org/docs/handbook/interfaces.html) is a TypeScript syntactical contract defining types so they can be checked. The `Product` interface is very complicated...everything is type `string` 🙃. Rest assured you can assign other types in interfaces.
 
@@ -468,7 +468,7 @@ export interface Product {
 }
 ```
 
-### HTTP For You and Me
+## HTTP For You and Me
 
 Another thing we'll need for the service is the [HTTP Client](https://angular.io/guide/http). This is an injectable class with methods to perform HTTP requests. We'll import that in the app's main module file.
 
@@ -496,7 +496,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 export class AppModule {}
 ```
 
-### On To the Actual Service
+## On To the Actual Service
 
 To make the service we can use the handy [`generate` command from the Angular CLI](https://angular.io/cli/generate) to create the files we need.
 
@@ -620,7 +620,7 @@ Phew, we've got the component that shows all the products! BUT it's still not be
 
 ### Updating the Product Component
 
-From the [template project](https://github.com/tzmanics/angular-sanity) we have a Products component to list all of the products. This is where we'll make the changes to insert all the components for each product.
+From the [template project](https://github.com/tzmanics/serverless-angular-starter) we have a Products component to list all of the products. This is where we'll make the changes to insert all the components for each product.
 
 #### The Module Part
 
@@ -750,9 +750,9 @@ Let's make sure the products look good on the page. We'll use `inline-flex` for 
 
 Get excited, we can finally see how this looks! To do so locally, we can run `ntl dev` in the root directory of the project. Then we'll head to [`localhost:8888/products`](localhost:8888/products).
 
-![final project locally](/img/blog/project-local.jpg 'The final project locally')
+![final project locally](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1617852205/template_sv0io2.jpg 'The final project locally')
 
-Now if we've either already hooked this project up to Netlify using the CLI `ntl init` command, or followed the steps in [part 1 of this series](https://hubs.ly/H0Hks4C0), we have CI/CD set up. That means we can git commit the code changes we made and it will trigger a new build of the project. Then we can head to the project dashboard or run the command `ntl open` to have Netlify take us right to the dashboard. Once, the new build is published we should see the same products we saw locally.
+We have CI/CD set up so that means we can git commit the code changes we made and it will trigger a new build of the project. Then we can head to the project dashboard or run the command `ntl open` to have Netlify take us right to the dashboard. Once, the new build is published we should see the same products we saw locally.
 
 ## Hook it Up
 
@@ -762,11 +762,11 @@ The data from Sanity.io will be added to the site whenever it is built. To make 
 
 Netlify provides an easy interface for setting up [Build Hooks](https://hubs.ly/H0HlCyf0) through the project's dashboard. We'll head to Site settings > Build & deploy > Continuous deployment > Build hooks and click the 'Add build hook' button. Today we'll just set the name to 'angular-sanity', for identification, and use the 'main' branch.
 
-![add hook](/img/blog/add-hook.jpg 'Creating a hook')
+![add hook](https://cdn.netlify.com/442272195c91753df142cc460949715820d27f05/05a89/img/blog/add-hook.jpg 'Creating a hook')
 
 Once we have the build hook information saved, we'll get a unique URL to copy for the next step. To trigger this hook, we need to send a POST request to that URL. Thankfully, Sanity.io has a quick process to set up that POST request.
 
-![hook link](/img/blog/hook-link.jpg 'Unique link for a build hook')
+![hook link](https://cdn.netlify.com/848e50776db989de8cab567581c97366e5d84109/1b4dd/img/blog/hook-link.jpg 'Unique link for a build hook')
 
 ### Creating a Sanity Hook
 
@@ -776,21 +776,21 @@ In the terminal, we need to make sure we're in the `backend` directory where our
 
 Through the prompts, we'll name the hook `netlify`, set the dataset to `production`, and paste the link we just received from Netlify when we made the Build Hook.
 
-![sanity hook](/img/blog/sanity-hook.jpg 'Creating a Sanity.io hook')
+![sanity hook](https://cdn.netlify.com/d2db6c3ca031654b07c71bb4b81877b718d1020f/abf64/img/blog/sanity-hook.jpg 'Creating a Sanity.io hook')
 
 ### [Hook](https://www.youtube.com/watch?v=pdz5kCaCRFM&ab_channel=BluesTravelerVEVO) Test
 
 Does this work? Well, let's add a new product and see about that. We can head back to our deployed Sanity.io instance. The address for this can be found at the top of the project dashboard beside 'Studio'. Check out [the section on Sanity deploying in the first part of this series](https://hubs.ly/H0HhzY30) to see where this link lives.
 
-![adding new data](/img/blog/add-data.jpg 'Adding new data')
+![adding new data](https://cdn.netlify.com/aa170d7a2913d21cff0b7f247903d916a1d94948/54738/img/blog/add-data.jpg 'Adding new data')
 
 After hitting 'Publish' on the new data, we can look at the Netlify Production deploy logs (on the project's main dashboard) and see that a build has been triggered by the Build Hook.
 
-![hook triggered](/img/blog/hook-triggered.jpg 'Hook triggered deploy')
+![hook triggered](https://cdn.netlify.com/b8aa56793ed4d79f9fb4b80544f4f79eefaadcfe/9e432/img/blog/hook-triggered.jpg 'Hook triggered deploy')
 
 Once that deploy is published we just head back to our site and, voila, a new product!
 
-![new product added](/img/blog/product-added.jpg 'New product added')
+![new product added](https://cdn.netlify.com/3bda85aba5cd15cb4e971d0c65ef4458b281dead/f1ddd/img/blog/product-added.jpg 'New product added')
 
 ## C'est Fini!
 
