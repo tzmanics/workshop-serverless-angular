@@ -84,6 +84,7 @@ When the live site is ready we can roam around the template site to see what exi
 
 ## Resources for the Road
 
-- [Angular Universal](https://angular.io/guide/universal)
+- [Scully.io, Angular's Static Site Generator](https://scully.io)
 - [Netlify Edge](https://ntl.fyi/3fPWU0f)
 - [Pre-rendering with Angular Universal](https://ntl.fyi/3fPZXFz)
+- [Angular Universal](https://angular.io/guide/universal)
