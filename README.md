@@ -21,9 +21,9 @@ This repo doesn't need to be cloned, it's purpose is to guide you through each s
 0. Introduction (EDT 12:00 - 12:30)
 1. [Project Setup & Deployment](/setup-and-deployment/README.md) (EDT 12:30 - 13:00)
 2. [User Login using Netlify Identity](/user-login/README.md) (EDT 13:00 - 13:30)
-3. [Building a Products List with Sanity.io Headless CMS](product-list/README.md) (EDT 13:30 - 15:00)
+3. [Storing & Retrieving User Data with Hasura](user-data/README.md) (EDT 13:30 - 15:00)
 4. BREAK TIME ƪƪ’▿’) (‘▿’ʃʃ (EDT 15:00 - 16:00)
-5. [Storing & Retrieving User Data with Hasura](user-data/README.md) (EDT 16:00 - 17:30)
+5. [Building a Products List with Sanity.io Headless CMS](product-list/README.md) (EDT 16:00 - 17:30)
 6. [Taking Payments using Stripe](payments/README.md) (EDT 17:30 - 18:30)
 7. Wrap Up & Questions (EDT 18:30 - 19:00)
 
