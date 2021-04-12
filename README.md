@@ -10,8 +10,8 @@ With our sites requiring more data and our users requiring faster speeds, we nee
 
 - a git workflow that sets up continuous deployment to a globally distributed Content Delivery Network (CDN)
 - stateless auth with JSON Web Tokens (JWTs) & serverless functions to allow for login
-- setting up a headless CMS to input data
 - a database that we use serverless functions to store and retrieve data
+- setting up a headless CMS to input data
 - & the ability to take payments by setting up serverless functions to talk to the Stripe API
 
 ## This Is How We Do It ヾ(^ ^ゞ
