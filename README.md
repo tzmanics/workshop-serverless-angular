@@ -24,7 +24,9 @@ This repo doesn't need to be cloned, it's purpose is to guide you through each s
 3. BREAK TIME ƪƪ’▿’) (‘▿’ʃʃ (EDT 15:00 - 16:00)
 4. [Taking Payments using Stripe](payments/README.md) (EDT 16:00 - 17:30)
 5. [User Login using Netlify Identity](/user-login/README.md) (EDT 17:30 - 18:30)
+
 *. [Storing & Retrieving User Data with Hasura](user-data/README.md)
+
 6. Wrap Up & Questions (EDT 18:30 - 19:00)
 
 ## The Setup
