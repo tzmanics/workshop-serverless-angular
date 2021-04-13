@@ -331,7 +331,7 @@ Let's start with a test function and see how we can test it locally. We will cre
 
 `mkdir functions && touch getProducts.js`
 
-[`functions/getProducts.js`](https://github.com/tzmanics/angular-sanity/blob/main/functions/getProducts.js)
+[`functions/getProducts.js`](https://github.com/tzmanics/serverless-angular-starter/blob/main/functions/getProducts.js)
 
 ```javascript
 exports.handler = async () => {
@@ -346,13 +346,13 @@ exports.handler = async () => {
 
 Through the Netlify CLI we can start up a local development environment by using the `netlify dev` command. Before we run that, let's set local build settings for `command` and `publish` for the dev environment in the `netlify.toml` configuration file.
 
-[`netlify.toml`](https://github.com/tzmanics/angular-sanity/blob/main/netlify.toml)
+[`netlify.toml`](https://github.com/tzmanics/serverless-angular-starter/blob/main/netlify.toml)
 
 ```toml
 [build]
-  command = "npm run prerender"
+  command = "ng build --prod && npm run scully"
   functions = "./functions"
-  publish = "dist/angular-sanity/browser"
+  publish = "dist/static"
 [dev]
   command = "npm run start"
   functions = "./functions"
